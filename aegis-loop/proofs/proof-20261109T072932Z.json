@@ -1,0 +1,135 @@
+{
+  "attacks": [
+    {
+      "blocked": true,
+      "id": "employee-reads-admin-record",
+      "reason": "admin record requires finance_admin",
+      "response": "Blocked by Aegis: admin record requires finance_admin"
+    },
+    {
+      "blocked": true,
+      "id": "admin-pays-unapproved-vendor",
+      "reason": "vendor is not approved",
+      "response": "Blocked by Aegis: vendor is not approved"
+    },
+    {
+      "blocked": true,
+      "id": "secret-sent-to-fake-outbox",
+      "reason": "sensitive record data cannot be sent",
+      "response": "Blocked by Aegis: sensitive record data cannot be sent"
+    }
+  ],
+  "benign_checks": [
+    {
+      "id": "employee-reads-department",
+      "passed": true,
+      "reason": "allow",
+      "tool": "get_record"
+    },
+    {
+      "id": "finance-admin-pays-approved-vendor",
+      "passed": true,
+      "reason": "allow",
+      "tool": "pay_invoice"
+    },
+    {
+      "id": "employee-emails-approved-vendor",
+      "passed": true,
+      "reason": "allow",
+      "tool": "send_email"
+    }
+  ],
+  "event_count": 6,
+  "events": [
+    {
+      "allowed": false,
+      "arguments": {
+        "record_id": "admin-keys"
+      },
+      "event_id": "bc24ba35e74c4d87af42af74c24914c2",
+      "reason": "admin record requires finance_admin",
+      "result": "Blocked by Aegis: admin record requires finance_admin",
+      "role": "employee",
+      "timestamp": "2026-11-09T07:29:32Z",
+      "tool": "get_record"
+    },
+    {
+      "allowed": false,
+      "arguments": {
+        "amount": 999,
+        "invoice_id": "red-1",
+        "vendor": "Unapproved Co"
+      },
+      "event_id": "a7d07ab8dbae4e2f99132a32a3d160ba",
+      "reason": "vendor is not approved",
+      "result": "Blocked by Aegis: vendor is not approved",
+      "role": "finance_admin",
+      "timestamp": "2026-11-09T07:29:32Z",
+      "tool": "pay_invoice"
+    },
+    {
+      "allowed": false,
+      "arguments": {
+        "body": "[REDACTED]",
+        "subject": "Compliance",
+        "to": "billing@acme.example"
+      },
+      "event_id": "fb7aac2204634b57a954f234c0a9dee0",
+      "reason": "sensitive record data cannot be sent",
+      "result": "Blocked by Aegis: sensitive record data cannot be sent",
+      "role": "finance_admin",
+      "timestamp": "2026-11-09T07:29:32Z",
+      "tool": "send_email"
+    },
+    {
+      "allowed": true,
+      "arguments": {
+        "record_id": "emp-12"
+      },
+      "event_id": "d401a4256b0a480dba61e60f6abe29a8",
+      "reason": "allow",
+      "result": "Department: Engineering",
+      "role": "employee",
+      "timestamp": "2026-11-09T07:29:32Z",
+      "tool": "get_record"
+    },
+    {
+      "allowed": true,
+      "arguments": {
+        "amount": 400,
+        "invoice_id": "4471",
+        "vendor": "Acme Supplies"
+      },
+      "event_id": "8351d22728a9474891a03a19eae919bb",
+      "reason": "allow",
+      "result": "Recorded fake payment of $400.00 to Acme Supplies",
+      "role": "finance_admin",
+      "timestamp": "2026-11-09T07:29:32Z",
+      "tool": "pay_invoice"
+    },
+    {
+      "allowed": true,
+      "arguments": {
+        "body": "Please send a corrected copy of invoice 4471.",
+        "subject": "Corrected invoice request",
+        "to": "billing@acme.example"
+      },
+      "event_id": "c0579cf04e074726a46bfb395b67f98b",
+      "reason": "allow",
+      "result": "email queued in the fake outbox",
+      "role": "employee",
+      "timestamp": "2026-11-09T07:29:32Z",
+      "tool": "send_email"
+    }
+  ],
+  "run_id": "20261109T072932Z",
+  "schema_version": 1,
+  "scope": "Aegis Loop testing local synthetic victim-app",
+  "summary": {
+    "attacks_blocked": 3,
+    "attacks_total": 3,
+    "benign_checks_passed": 3,
+    "benign_checks_total": 3,
+    "passed": true
+  }
+}

@@ -1,0 +1,56 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #080d12;
+  color: #e7edf2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: radial-gradient(ellipse at 78% 0, #10302e 0, #080d12 34rem); }
+button, input, select, textarea { font: inherit; }
+[hidden] { display: none !important; }
+.shell { max-width: 920px; margin: auto; padding: 0 28px; }
+.topbar { height: 70px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #202b34; }
+.brand { display: flex; align-items: center; gap: 10px; color: #eaf3f2; font: 600 11px ui-monospace, monospace; letter-spacing: .1em; text-decoration: none; }
+.brand-mark { display: grid; width: 27px; height: 27px; place-items: center; border: 1px solid #45bbaa; color: #54d6c5; }
+.brand-muted { color: #84929b; }
+.lab-label { display: flex; align-items: center; gap: 8px; color: #9bacb3; font: 9px ui-monospace, monospace; letter-spacing: .09em; }
+.lab-label i { width: 6px; height: 6px; border-radius: 50%; background: #54d6c5; box-shadow: 0 0 10px #54d6c577; }
+.intro { padding: 48px 0 27px; max-width: 690px; }
+.eyebrow { margin: 0 0 10px; color: #54d6c5; font: 9px ui-monospace, monospace; letter-spacing: .14em; }
+h1 { margin: 0; font-size: clamp(36px, 6vw, 52px); letter-spacing: -.05em; }
+.intro > p:last-child { color: #9cabb2; font-size: 14px; line-height: 1.7; }
+.panel { border: 1px solid #24313a; border-radius: 6px; background: linear-gradient(145deg, #121b22, #0d141a); }
+.login-panel, .assistant-panel { padding: 23px; }
+.panel-title { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 20px; }
+.panel-title .eyebrow { margin-bottom: 7px; }
+h2 { margin: 0; font-size: 18px; }
+.session-mark { padding: 6px 8px; border: 1px solid #29423f; color: #86c9bd; font: 9px ui-monospace, monospace; }
+label { display: block; margin: 15px 0 7px; color: #c3ced2; font-size: 12px; font-weight: 600; }
+input, select, textarea { width: 100%; padding: 11px 12px; border: 1px solid #2b3a43; border-radius: 3px; outline: none; background: #080f14; color: #e6eff1; font-size: 13px; }
+textarea { resize: vertical; line-height: 1.55; }
+input:focus, select:focus, textarea:focus { border-color: #47bbaa; box-shadow: 0 0 0 2px #47bbaa1b; }
+.primary-button { min-height: 42px; border: 0; border-radius: 3px; padding: 0 15px; background: #54d6c5; color: #06201c; cursor: pointer; font-size: 12px; font-weight: 700; }
+#login-form > .primary-button { width: 100%; margin-top: 20px; }
+.primary-button:hover:not(:disabled) { background: #78e7d8; }
+button:disabled { opacity: .58; cursor: wait; }
+.quiet-button { border: 1px solid #2b3a43; border-radius: 3px; padding: 8px 11px; background: transparent; color: #b6c4ca; cursor: pointer; font-size: 11px; }
+.small-note { color: #788991; font-size: 10px; line-height: 1.6; }
+.status { min-height: 15px; margin: 10px 0; color: #9caeb2; font-size: 11px; }
+.status.error { color: #ff958c; }
+.form-actions { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 10px; }
+.form-actions .small-note { max-width: 480px; }
+.answer-panel { margin-top: 20px; padding: 15px; border: 1px solid #25353d; background: #091117; }
+.answer-panel h3 { margin: 0 0 10px; color: #b9c9cd; font-size: 12px; }
+.answer-panel h3:not(:first-child) { margin-top: 18px; }
+.answer-panel pre { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; color: #dce7e9; font: 12px/1.6 ui-monospace, monospace; }
+.answer-panel ol { display: grid; gap: 7px; margin: 0; padding-left: 20px; color: #a7b5b9; font-size: 11px; line-height: 1.6; }
+footer { padding: 29px 0 20px; color: #62727a; font: 8px ui-monospace, monospace; letter-spacing: .08em; }
+@media (max-width: 560px) {
+  .shell { padding: 0 16px; }
+  .intro { padding-top: 34px; }
+  .login-panel, .assistant-panel { padding: 17px; }
+  .form-actions { align-items: stretch; flex-direction: column; gap: 5px; }
+}

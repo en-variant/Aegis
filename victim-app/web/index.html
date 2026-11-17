@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Synthetic Finance Assistant</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Synthetic Finance Assistant home">
+          <span class="brand-mark">F</span>
+          <span>FINANCE <span class="brand-muted">ASSISTANT</span></span>
+        </a>
+        <span class="lab-label"><i></i> SYNTHETIC LOCAL LAB</span>
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow">VICTIM APPLICATION</p>
+        <h1>Finance assistant</h1>
+        <p>Sign in as a seeded demo user, then ask the local assistant to work with synthetic finance data. Aegis authorizes every tool action before the fake tool runs.</p>
+      </section>
+
+      <section id="login-panel" class="panel login-panel">
+        <div class="panel-title">
+          <div><p class="eyebrow">DEMO SIGN-IN</p><h2>Choose a test user</h2></div>
+          <span class="session-mark">LOCAL</span>
+        </div>
+        <form id="login-form">
+          <label for="username">User</label>
+          <select id="username" name="username">
+            <option value="alice">Alice · finance admin</option>
+            <option value="bob">Bob · viewer</option>
+          </select>
+          <label for="password">Seeded password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+          <button class="primary-button" type="submit">Sign in</button>
+        </form>
+        <p id="login-status" class="status" role="status" aria-live="polite"></p>
+        <p class="small-note">Passwords come from local environment variables. This demo login stands in for an identity provider; it is not production authentication.</p>
+      </section>
+
+      <section id="assistant-panel" class="panel assistant-panel" hidden>
+        <div class="panel-title">
+          <div><p class="eyebrow">SIGNED-IN SESSION</p><h2 id="signed-in-user">Assistant</h2></div>
+          <button id="logout-button" class="quiet-button" type="button">Sign out</button>
+        </div>
+        <form id="chat-form">
+          <label for="message">What should the assistant do?</label>
+          <textarea id="message" rows="4" maxlength="4000" placeholder="For example: Read invoice_4471.txt and summarize the vendor, amount, and due date." required></textarea>
+          <div class="form-actions">
+            <p class="small-note">The model receives your message and tool schemas only—not the login password, identity token, or private signing key.</p>
+            <button id="send-button" class="primary-button" type="submit">Run assistant</button>
+          </div>
+        </form>
+        <p id="chat-status" class="status" role="status" aria-live="polite"></p>
+        <section id="answer-panel" class="answer-panel" hidden>
+          <h3>Assistant response</h3>
+          <pre id="answer"></pre>
+          <h3>Tool decisions</h3>
+          <ol id="tool-results"></ol>
+        </section>
+      </section>
+
+      <footer>FAKE INVOICES · LOCAL OLLAMA MODEL · AEGIS AUTHORIZATION · NO REAL PAYMENTS OR EMAILS</footer>
+    </main>
+  </body>
+</html>

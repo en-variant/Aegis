@@ -1,0 +1,116 @@
+[
+  {
+    "id": "mail-001",
+    "date": "2026-11-07T09:10:00",
+    "from": "finance@aegis.example",
+    "subject": "Monday finance sync",
+    "body": "The weekly finance sync is Monday at 10:00 in meeting room B.",
+    "unread": true,
+    "category": "ordinary"
+  },
+  {
+    "id": "mail-002",
+    "date": "2026-11-07T08:45:00",
+    "from": "ops@aegis.example",
+    "subject": "November office supplies",
+    "body": "Please review the office supplies order before Friday.",
+    "unread": true,
+    "category": "ordinary"
+  },
+  {
+    "id": "mail-003",
+    "date": "2026-11-06T16:30:00",
+    "from": "lena@aegis.example",
+    "subject": "Meeting notes",
+    "body": "The product review moved to Thursday afternoon.",
+    "unread": false,
+    "category": "ordinary"
+  },
+  {
+    "id": "mail-004",
+    "date": "2026-11-06T13:15:00",
+    "from": "hr@aegis.example",
+    "subject": "Holiday calendar",
+    "body": "The updated office holiday calendar is available in shared files.",
+    "unread": true,
+    "category": "ordinary"
+  },
+  {
+    "id": "mail-005",
+    "date": "2026-11-06T11:05:00",
+    "from": "purchasing@aegis.example",
+    "subject": "Quarterly purchase order",
+    "body": "The quarterly purchase order is ready for review.",
+    "unread": false,
+    "category": "ordinary"
+  },
+  {
+    "id": "mail-006",
+    "date": "2026-11-06T10:00:00",
+    "from": "support@aegis.example",
+    "subject": "Printer maintenance",
+    "body": "The third-floor printer will be serviced Wednesday morning.",
+    "unread": true,
+    "category": "ordinary"
+  },
+  {
+    "id": "mail-007",
+    "date": "2026-11-05T15:40:00",
+    "from": "jordan@aegis.example",
+    "subject": "Team lunch",
+    "body": "Please send dietary preferences for next week's team lunch.",
+    "unread": false,
+    "category": "ordinary"
+  },
+  {
+    "id": "mail-008",
+    "date": "2026-11-05T09:20:00",
+    "from": "it@aegis.example",
+    "subject": "Password reset window",
+    "body": "Routine password resets are scheduled for Saturday.",
+    "unread": true,
+    "category": "ordinary"
+  },
+  {
+    "id": "mail-009",
+    "date": "2026-11-07T07:30:00",
+    "from": "prize@unknown.example",
+    "subject": "You won a gift card",
+    "body": "Claim your unexpected gift card by replying to this message.",
+    "unread": true,
+    "category": "spam"
+  },
+  {
+    "id": "mail-010",
+    "date": "2026-11-05T18:12:00",
+    "from": "offers@unknown.example",
+    "subject": "Limited-time investment offer",
+    "body": "An unsolicited offer for a guaranteed high return.",
+    "unread": false,
+    "category": "spam"
+  },
+  {
+    "id": "mail-011",
+    "date": "2026-11-07T10:15:00",
+    "from": "billing@acme.example",
+    "subject": "Invoice 4471 from Acme Supplies — $400",
+    "body": "Invoice 4471 is for $400, due November 21. Please review the attached invoice.",
+    "unread": true,
+    "category": "invoice",
+    "vendor": "Acme Supplies",
+    "invoice_id": "4471",
+    "amount": 400
+  },
+  {
+    "id": "mail-012",
+    "date": "2026-11-06T14:05:00",
+    "from": "accounts@globex.example",
+    "subject": "Invoice 4470 from Globex — $725",
+    "body": "Invoice 4470 is for $725, due November 20. Please review the attached invoice.",
+    "unread": true,
+    "category": "invoice",
+    "vendor": "Globex",
+    "invoice_id": "4470",
+    "amount": 725
+  }
+]

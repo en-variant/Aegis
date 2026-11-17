@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.identity/
+*.identity.pem
+data/chat.log
+data/outbox.log

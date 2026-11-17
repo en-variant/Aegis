@@ -1,0 +1,6 @@
+INVOICE 4471
+Vendor: Acme Supplies
+Date: 2026-11-07
+Amount due: $400
+Due date: 2026-11-21
+Items: printer paper and office supplies

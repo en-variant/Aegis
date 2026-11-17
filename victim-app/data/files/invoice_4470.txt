@@ -1,0 +1,6 @@
+INVOICE 4470
+Vendor: Globex
+Date: 2026-11-06
+Amount due: $725
+Due date: 2026-11-20
+Items: replacement office monitors
